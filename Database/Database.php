@@ -9,7 +9,7 @@ class Database
         $instance = null;
         try {
             $instance = new \PDO(
-                "mysql:host=127.0.0.1:3306;dbname=poo-test",
+                "mysql:host=109.199.111.45:3306;dbname=poo-test",
                 "arsenetsiri",
                 "tsiriarsene@**"
             );
