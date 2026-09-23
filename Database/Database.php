@@ -10,7 +10,7 @@ class Database
 
         try {
             $instance = new \PDO(
-                "mysql:host=127.0.0.1;dbname=poo-test;charset=utf8mb4",
+                "mysql:host=127.0.0.1;port=3306;dbname=poo-test;charset=utf8mb4",
                 "arsenetsiri",
                 "tsiriarsene@**"
             );
@@ -27,7 +27,7 @@ class Database
                 \PDO::FETCH_OBJ
             );
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            echo $e->getMessage() . "Can't connect to database";
         }
 
         return $instance;
